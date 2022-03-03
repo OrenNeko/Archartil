@@ -13,7 +13,8 @@ class Music:
         print("[添加音乐文件]")
         self.file_path = music_file
         self.file_name = os.path.basename(self.file_path).split(".")[0]
-        self.wav_path = self.format_convert("wav")
+        self.wav_path = music_file.split(".")[0] + ".wav"
+        self.format_convert("wav")
         self.sr = librosa.get_samplerate(self.wav_path)
         self.audio, self.sr = librosa.load(self.wav_path, sr=self.sr)
         self.duration = librosa.get_duration(self.audio, sr=self.sr)
@@ -33,7 +34,6 @@ class Music:
                 return False
 
         print("-->格式转换成功")
-        return self.format_path
 
     def get_bpm_and_offset(self):
         print("[BPM与OFFSET测定]")
@@ -44,7 +44,7 @@ class Music:
             self.bpm = round(self.bpm * 2)
         while self.bpm > 400:
             self.bpm = round(self.bpm / 2)
-        self.onset = librosa.frames_to_time(frames=librosa.onset.onset_detect(y=self.audio[0:5000]), sr=self.sr) * 1000
+        self.onset = librosa.frames_to_time(frames=librosa.onset.onset_detect(y=self.audio), sr=self.sr) * 1000
         self.offset = round(self.onset[0])
 
         # self.duration = librosa.get_duration(self.audio, self.sr) * 1000
