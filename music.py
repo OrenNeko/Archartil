@@ -24,10 +24,13 @@ class Music:
     def format_convert(self, target_format):
         print("[文件格式转换,目标格式：%s]" % target_format)
         self.format_path = os.path.join(os.path.dirname(self.file_path), "base.%s" % target_format)
+        cmd_console = "ffmpeg.exe -i %s %s" % (os.path.abspath(self.file_path), os.path.abspath(self.format_path))
         if not os.path.exists(self.format_path):
             print("-->未发现%s文件,转换中..." % target_format)
             try:
-                os.system("ffmpeg.exe -i %s %s" % (self.format_path, self.wav_path))
+                print(cmd_console)
+                os.system("cd tool")
+                os.system(cmd_console)
             except Exception as e:
                 print(e)
                 print("-->格式转换失败")
@@ -88,4 +91,4 @@ class SeparatorPart:
     def onset_detect(self):
         print("-->%s声部正在进行音符端点检测" % self.part)
         self.onset = librosa.frames_to_time(librosa.onset.onset_detect(self.audio), self.sr) * 1000
-        print("-->%s声部检测完毕,端点音符数:%d" % (self.part,len(self.onset)))
+        print("-->%s声部检测完毕,端点音符数:%d" % (self.part, len(self.onset)))
