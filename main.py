@@ -1,8 +1,8 @@
 from project import Project
 
 if __name__ == '__main__':
-    p = Project("D:\LIFE\Funmade2022\パニックポップ☆フェスティバル!!!")
-    p.add_music(music_file=r"D:\LIFE\Funmade2022\パニックポップ☆フェスティバル!!!\base.mp3", separate_stems=5)
+    p = Project("chart/test")
+    p.add_music(music_file=r"chart/test/base.mp3", separate_stems=5)
     p.get_timestamps(timestamps_div=16, tolerance_times=2)
     parts_weight = {
         "vocals": 1,
