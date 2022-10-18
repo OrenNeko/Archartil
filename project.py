@@ -2,7 +2,7 @@ import os.path
 import random
 
 from arcfutil import aff
-from music import Music
+from musicHandler import MusicHandler
 
 
 class Project:
@@ -14,7 +14,7 @@ class Project:
         self.afflist = []
 
     def add_music(self, music_file, separate_stems):
-        self.music = Music(music_file=music_file)
+        self.music = MusicHandler(music_file=music_file)
         self.music.reload(stems=separate_stems)
 
     def get_timestamps(self, timestamps_div=4, tolerance_times=1):

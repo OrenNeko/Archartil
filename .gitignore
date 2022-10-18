@@ -3,3 +3,12 @@
 /chart/bookmaker/3.aff
 /pretrained_models/
 /venv/
+/parser/chart
+/chart/test
+/data/Malody_Key(4K)
+/data/RhythmMaster
+/data/rm_test_chart
+/data/melody_4k_part1.pickle
+/data/melody_4k_part2.pickle
+/data/melody_4k_part3.pickle
+/data/melody_4k_part4.pickle
