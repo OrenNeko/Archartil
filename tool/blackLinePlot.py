@@ -184,7 +184,7 @@ for c_i, c in enumerate(["A", "B", "C"]):
     aff_object_list = aff_object_list + al
 
 # 读取图片
-m = pic2img(pic_path="../fonts/test.png")
+m = pic2img(pic_path="../data/fonts/test.png")
 # 图片转换为定位锚点
 t = img2point(m, threshold=distance_threshold, scale=False)
 # 定位锚点转换为黑线物件
