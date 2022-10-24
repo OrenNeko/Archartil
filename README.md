@@ -4,9 +4,10 @@ Affcat是一个根据音乐自动生成Arcaea音乐游戏谱面的工具，目�
 * 4K谱面生成
 * 图片/字符转黑线
   * tool.blackLinePlot
-* 谱面转换（RM的imd文件，Malody的mc文件）
+* 谱面转换（RM的imd文件，Malody的mc文件，BMS的bms文件）
   * data.malody.mc2aff
   * data.rhythmmaster.imd2aff
+  * data.bms.bms2aff
 
 # Dependency
 ```Bash
@@ -64,6 +65,8 @@ p.dumps("3.aff")
   | Accuracy |
 
 # Update
+* 2022/10/24
+    * 增加BMS转Arcaea谱面
 * 2022/10/18
     * 数据集处理，包括RM和Malody的4K谱面以及Arcaea谱面
     * 使用C-LSTM模型训练生成采音模型(model/trainModel.py)
