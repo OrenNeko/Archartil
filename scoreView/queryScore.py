@@ -6,11 +6,11 @@ from tqdm import tqdm
 from bs4 import BeautifulSoup
 from colorama import Fore, Style
 
-def print_error(msg):
-    print(Fore.RED + msg + Style.RESET_ALL)
+def print_error(*args):
+    print(Fore.RED + " ".join(map(str, args)) + Style.RESET_ALL)
 
-def print_info(msg):
-    print(Fore.GREEN + msg + Style.RESET_ALL)
+def print_info(*args):
+    print(Fore.GREEN + " ".join(map(str, args)) + Style.RESET_ALL)
 
 class reqLowiro:
     def __init__(self):
