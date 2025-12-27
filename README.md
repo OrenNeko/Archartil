@@ -1,10 +1,10 @@
 # Archartil
 
-Archartil 是一个 Arcaea 相关的工具仓库
+Archartil 是一个 Arcaea 相关的工具仓库。[B站相关视频](https://space.bilibili.com/30871838/)
 
 ## 功能简介
 
-[预览视频](https://space.bilibili.com/30871838/channel/collectiondetail?sid=222440)
+
 
 ### 1. chartGen 谱面生成
 - 基于音频分析的 4K 谱面生成
@@ -16,8 +16,11 @@ Archartil 是一个 Arcaea 相关的工具仓库
 ### 3. scoreView 查分器
 - 预览图![scoreView 预览](./scoreView-preview.png)
 
+### 4. opinionMine 评论挖掘
+- 基于LLM的Arcaea谱面预览视频下的用户评论情感分析
+
 ## 资源文件
-工具可能用到的资源在这里：[resources](https://drive.google.com/drive/folders/1AyOFhFNn-uUynR88ugbGEDhEY_6NmJfT?usp=sharing)
+为避免仓库过大，工具可能用到的数据和资源在这里：[resources](https://drive.google.com/drive/folders/1AyOFhFNn-uUynR88ugbGEDhEY_6NmJfT?usp=sharing)
 
 - ``chartGen``
   - ``bookmaker``: 测试用曲与谱面
@@ -25,9 +28,13 @@ Archartil 是一个 Arcaea 相关的工具仓库
 - ``scoreView``
   - ``standard_rating``: v6.0的定数表，来源Wiki
   - ``score.html``: 可供预览的查分界面
+- ``opinionMine``
+  - ``combined_comments_with_songlist.csv``: 2021-2025年间雨笙Hikari谱面保管室用户评论数据（Arcaea版本3.10-6.8）
 - ``ffmpeg.exe``: 多媒体文件转换器
 
 ## 更新日志
+- **2025/12/27**
+  - 增加评论情感挖掘
 - **2024/12/15**
   - 增加查分器工具
 - **2022/10/24**
@@ -52,3 +59,4 @@ Archartil 是一个 Arcaea 相关的工具仓库
 - [librosa](http://librosa.org/doc/latest/index.html)
 - [MalodyBeatmapGenerator](https://github.com/nladuo/AI_beatmap_generator)
 - [MalodyBeatmapGenerator (MirrOrangeVer.)](https://github.com/mirrorange/AI_beatmap_generator)
+- [雨笙Hikari](https://space.bilibili.com/441390256)
